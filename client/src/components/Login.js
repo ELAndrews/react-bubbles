@@ -2,8 +2,8 @@ import React, { useRef } from "react";
 import axios from "axios";
 
 const Login = props => {
-  // make a post request to retrieve a token from the api
-  // when you have handled the token, navigate to the BubblePage route
+  // make a post request to retrieve a token from the api [x]
+  // when you have handled the token, navigate to the BubblePage route [x]
 
   const usernameRef = useRef();
   const passwordRef = useRef();
@@ -26,9 +26,6 @@ const Login = props => {
 
   return (
     <>
-      <nav>
-        <h1>Welcome to the Bubble App!</h1>
-      </nav>
       <div>
         <form onSubmit={handleSubmit}>
           <p> Username:</p>
