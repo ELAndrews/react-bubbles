@@ -108,7 +108,7 @@ const ColorList = ({ colors, updateColors }) => {
           </div>
         </form>
       )}
-      <div className="spacer" />
+      <div className="addColorContainer" />
       <div>
         <form onSubmit={addColor}>
           <label>
