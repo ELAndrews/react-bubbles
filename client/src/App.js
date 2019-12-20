@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import Login from "./components/Login";
 import BubblePage from "./components/BubblePage";
 import "./styles.scss";
-import { setServers } from "dns";
 
 function App() {
   const [error, setError] = useState(null);
