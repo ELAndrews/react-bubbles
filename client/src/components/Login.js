@@ -26,13 +26,13 @@ const Login = props => {
 
   return (
     <>
-      <div>
+      <div className="login">
         <form onSubmit={handleSubmit}>
           <p> Username:</p>
           <input type="text" ref={usernameRef} />
           <p>Password:</p>
           <input type="password" ref={passwordRef} />
-          <input type="submit" />
+          <input className="submitBtn" type="submit" />
         </form>
       </div>
     </>

@@ -18,15 +18,28 @@ function App(props) {
   };
   return (
     <Router>
-      <nav>
-        <h1>Welcome to the Bubble App!</h1>
-        <NavLink to="/">LogIn</NavLink>
-        <NavLink to="/Bubbles">BUBBLES!!</NavLink>
-        <button onClick={logout}>Log Out</button>
-      </nav>
-      <div className="App">
-        <Route exact path="/" render={props => <Login {...props} />} />
-        <Route path="/Bubbles" render={props => authCheck(BubblePage, props)} />
+      <div className="container">
+        <nav>
+          <div className="mainLinks">
+            <NavLink to="/" className="navLinks loginLink">
+              Log In
+            </NavLink>
+            <NavLink to="/Bubbles" className="navLinks">
+              BUBBLES!!
+            </NavLink>
+            <button onClick={logout} className="logoutLink">
+              Log Out
+            </button>
+          </div>
+          <h1>Welcome to the Bubble App!</h1>
+        </nav>
+        <div className="App">
+          <Route exact path="/" render={props => <Login {...props} />} />
+          <Route
+            path="/Bubbles"
+            render={props => authCheck(BubblePage, props)}
+          />
+        </div>
       </div>
     </Router>
   );

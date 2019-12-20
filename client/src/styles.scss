@@ -8,18 +8,101 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .App {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   display: flex;
+  margin-top: 180px;
 
   svg {
     height: 100%;
   }
 }
 
+.container {
+  background: linear-gradient(131deg, #10dd18, #cc20b6, #f24917, #1c17f2);
+  background-size: 150vh 150vw;
+  animation: colorSlide 21s ease infinite;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0px;
+}
+
+nav {
+  height: 150px;
+  width: 100vw;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+
+  .mainLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+
+    .navLinks {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 10px;
+      padding: 20px;
+      border: 1px solid #1c17f2;
+      background-color: #1c17f2;
+      border-radius: 50%;
+    }
+
+    .loginLink {
+      transform: rotate(-20deg);
+    }
+
+    .logoutLink {
+      margin: 10px;
+      border: 1px solid #1c17f2;
+      background-color: #1c17f2;
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+      color: white;
+      font-weight: bold;
+      transform: rotate(20deg);
+    }
+  }
+}
+
+.login {
+  height: 250px;
+  width: 200px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+
+  form {
+    position: relative;
+    bottom: 50px;
+    line-height: 1.6;
+
+    .submitBtn {
+      margin: 20px auto;
+      border: 1px solid #1c17f2;
+      background-color: #1c17f2;
+      border-radius: 50%;
+      color: white;
+      width: 60px;
+      padding: 20px 0px;
+    }
+  }
+}
 .spacer {
   height: 100%;
 }
@@ -95,5 +178,19 @@ form {
     color: white;
     padding: 3px 8px;
     margin-top: 16px;
+  }
+}
+
+// Animation
+
+@keyframes colorSlide {
+  0% {
+    background-position: 18% 0%;
+  }
+  50% {
+    background-position: 83% 100%;
+  }
+  100% {
+    background-position: 18% 0%;
   }
 }
